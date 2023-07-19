@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'OuterSansLight';
+    src: url('./assets/fonts/OuterSansLight.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'OuterSansMedium';
+    src: url('./assets/fonts/OuterSansMedium.otf') format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, main {
+    background: #000;
+    position: relative;
+}
+
+header {
+    background: #000;
+    z-index: 10;
+}
+
+a {
+    font-family: "OuterSansLight", sans-serif;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+a:hover {
+    color: #FAFF00;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    font-family: "OuterSansMedium", sans-serif;
+}
+
+header {
+    left: 0;
+    top: 0;
+    right: 0;
+    background: none;
+}
+
+.btn {
+    background: #FAFF00;
+    color: #000;
+    font-family: "OuterSansMedium", sans-serif;
+    font-size: 1rem;
+    padding: 0.5em 3em;
+    border-radius: 2em;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+.btn-transparent {
+    padding: 0.5em;
+    background: none;
+}
+
+.btn-transparent:hover {
+    background: none
+}
+
+.homescreen {
+    padding: 20em 0;
+    background-image: url("./assets/background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .homescreen {
+        background-size: contain;
+    }
+
+    .container {
+        max-width: 992px;
+    }
+}
