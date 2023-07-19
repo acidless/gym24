@@ -14,7 +14,7 @@
     margin: 0;
 }
 
-html, main {
+body {
     background: #000;
     position: relative;
 }
