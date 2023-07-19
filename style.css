@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OuterSansLight';
-    src: url('./assets/fonts/OuterSansLight.otf') format("opentype");
+    src: url('assets/fonts/OuterSansLight.otf') format("opentype");
 }
 
 @font-face {
@@ -25,7 +25,7 @@ header {
 }
 
 a {
-    font-family: "OuterSansLight", sans-serif;
+
     font-size: 0.75rem;
     color: #fff;
 }
@@ -34,10 +34,33 @@ a:hover {
     color: #FAFF00;
 }
 
-h1 {
+h1, h2, h3 {
     font-size: 4rem;
     color: #fff;
+}
+
+.fw-light, a, li, p {
+    font-family: "OuterSansLight", sans-serif;
+    font-weight: inherit !important;
+}
+
+h1, h2, h3, .fw-bold, .btn {
     font-family: "OuterSansMedium", sans-serif;
+    font-weight: normal !important;
+}
+
+p, li {
+    color: #fff;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.25rem;
 }
 
 header {
@@ -47,12 +70,41 @@ header {
     background: none;
 }
 
+section {
+    margin-bottom: 10rem;
+}
+
+hr {
+    color: #000;
+    opacity: 1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    position: relative;
+    margin-left: 0.5rem;
+}
+
+li:before {
+    position: absolute;
+    content: url('./assets/check-circle.svg');
+    top: 50%;
+    left: -2.25em;
+    transform: translateY(-50%);
+}
+
+.mb-7 {
+    margin-bottom: 7rem;
+}
+
 .btn {
     background: #FAFF00;
     color: #000;
-    font-family: "OuterSansMedium", sans-serif;
-    font-size: 1rem;
-    padding: 0.5em 3em;
+    font-size: 0.875rem;
+    padding: 0.5rem 3rem;
     border-radius: 2em;
 }
 
@@ -75,10 +127,30 @@ header {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-bottom: 10rem;
+}
+
+.homescreen .btn {
+    font-size: 1rem;
+}
+
+.membership-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+}
+
+.membership-option {
+    background: #222222;
+    padding: 2rem 0 2.5rem 0;
+}
+
+.reason-to-join {
+    margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 1200px) {
-    .container {
+    .homescreen .container {
         max-width: 1200px;
     }
 }
@@ -86,9 +158,25 @@ header {
 @media screen and (max-width: 992px) {
     .homescreen {
         background-size: contain;
+        margin-bottom: 0;
     }
 
-    .container {
+    .homescreen .container {
         max-width: 992px;
+    }
+
+    .membership-options {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .membership-options {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
