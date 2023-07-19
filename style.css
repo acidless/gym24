@@ -113,8 +113,8 @@ li:before {
 }
 
 .btn-transparent {
-    padding: 0.5em;
     background: none;
+    padding: 0;
 }
 
 .btn-transparent:hover {
@@ -138,6 +138,7 @@ li:before {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5rem;
+    padding: 0 5em;
 }
 
 .membership-option {
@@ -149,9 +150,43 @@ li:before {
     margin-bottom: 5rem;
 }
 
+.slider__slides button {
+    padding: 0;
+    height: 0.2em;
+    width: 2.5em;
+    margin-right: 0.5em;
+    border-radius: 0.1em;
+    background: #fff;
+    border: none;
+}
+
+.slider__slides button:hover, .slider__slides .active {
+    background: #FAFF00;
+}
+
+.staff-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+}
+
+.staff {
+    background: #222222;
+}
+
+@media screen and (max-width: 1440px) {
+    .staff-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .homescreen .container {
         max-width: 1200px;
+    }
+
+    .membership-options {
+        padding: 0;
     }
 }
 
@@ -176,7 +211,26 @@ li:before {
         font-size: 1.75rem;
     }
 
+    .membership .container {
+        max-width: none;
+    }
+
     .membership-options {
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        width: max-content;
+        padding: 0 1em;
+        grid-gap: 1em;
+    }
+
+    .membership-option {
+        width: 80vw;
+    }
+
+    .staff-wrapper {
+        display: flex;
+    }
+
+    .staff {
+        width: 50vw;
     }
 }
