@@ -150,18 +150,42 @@ li:before {
     margin-bottom: 5rem;
 }
 
-.slider__slides button {
-    padding: 0;
-    height: 0.2em;
-    width: 2.5em;
-    margin-right: 0.5em;
-    border-radius: 0.1em;
-    background: #fff;
+.carousel-indicators [data-bs-target] {
     border: none;
+    background: #fff;
+    opacity: 1;
+    border-radius: 0.1em;
+    width: 40px;
 }
 
-.slider__slides button:hover, .slider__slides .active {
+.carousel [data-bs-target]:hover, .carousel .active {
     background: #FAFF00;
+}
+
+.carousel-indicators {
+    left: 0;
+    margin: 0;
+    justify-content: flex-start;
+    bottom: -1.5em;
+}
+
+.carousel-controls {
+    right: 0;
+    bottom: -1.5em;
+}
+
+.carousel-controls button {
+    width: auto;
+    top: auto;
+    bottom: auto;
+    position: static;
+    margin: 0;
+    opacity: 1;
+}
+
+.carousel .carousel-controls button:hover {
+    opacity: 0.5;
+    background: none;
 }
 
 .staff-wrapper {
